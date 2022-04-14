@@ -1,4 +1,4 @@
-properties([pipelineTriggers([pollSCM('* * * * *')])])
+properties([parameters([string(defaultValue: 'chen', description: 'what;s your name?', name: 'NAME')]), pipelineTriggers([pollSCM('* * * * *')])])
 
 node {
     stage("clone") {
